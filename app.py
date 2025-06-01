@@ -21,7 +21,7 @@ if st.button("Generate Music"):
         # Detect emotion using the NLP model
         mood = detect_emotion(user_text)
 
-        st.success(f"Detected Mood: {mood.capitalize()} 🎵")
+        st.success(f"Detected Mood: {mood.capitalize()}")
 
         # Generate MIDI music
         midi_file = generate_music(mood)
@@ -31,6 +31,6 @@ if st.button("Generate Music"):
 
         # Play the generated music
         st.audio(wav_file, format='audio/wav')
-        st.success("Music generated and playing now! 🎶")
+        st.success("Music generated and playing now!")
     else:
         st.warning("Please describe your mood.")

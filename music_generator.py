@@ -3,8 +3,8 @@ import numpy as np
 import os
 from config import device
 from model import PerformanceRNN
-from sequence import Control
 import utils
+import time
 
 # Updated Mood-to-Music Controls
 MOOD_CONTROLS = {
@@ -54,7 +54,7 @@ def generate_music(mood):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    midi_file = f"output/{mood}.mid"
+    midi_file = f"output/{mood}_{time.strftime("%Y%m%d_%H%M%S")}.mid"
     # print(f"Generated Outputs Shape: {outputs.shape}")
     # print(f"Sample Output Data: {outputs[:10].tolist()}")
     # print(f"Min Value: {outputs.min()}, Max Value: {outputs.max()}")

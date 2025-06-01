@@ -75,14 +75,14 @@ This executes:
 
 Outputs saved in:
 ```bash
-output/music_<emotion>.mid
-output/music_<emotion>.wav
+output/music_<emotion>_<timestamp>.mid
+output/music_<emotion>_<timestamp>.wav
 ```
 
 To play the WAV file:
 ```bash
-open output/music_joy.wav  # macOS
-start output/music_joy.wav # Windows
+open output/music_<emotion>_<timestamp>.wav  # macOS
+start output/music_<emotion>_<timestamp>.wav # Windows
 ```
 
 ---
